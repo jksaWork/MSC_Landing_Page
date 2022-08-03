@@ -1,0 +1,8 @@
+function ArabEng(P1){ 
+    var x = document.getElementById(P1).value;
+     x = String(x.replace(/[٠١٢٣٤٥٦٧٨٩]/g, function (d) {
+         return d.charCodeAt(0) - 1632;                
+         })
+     );
+     $s(P1,x);
+}
