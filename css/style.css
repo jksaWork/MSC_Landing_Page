@@ -26,10 +26,10 @@
     /* display: inline-block; */
     @media  (max-width: 992px){
         .landing_page_background {
-            height: 100vh;
+            height: 800px;
         }
         .landing_page_header{
-            height: 100vh;
+            height: 700px;
         }
     }
 
@@ -142,7 +142,15 @@ max-height: 40px;
 
 body{
     height: 2000px;
+    width: 100%;
+    /* overflow-x: hidden; */
 }
+@media (max-width: 992px){
+    body{
+        overflow-x: hidden;
+    }
+}
+
 .nav_bar_section ul li.active a , .nav_bar_section ul li:hover a{
     color:var(--info-color);
 
@@ -203,6 +211,7 @@ body{
 }
 @media  (max-width: 992px){
     .header_description{
+        padding: 20px;
         display: block;
         height: calc(100vh - 80px);
     }
@@ -234,6 +243,9 @@ body{
         margin: auto;
         margin-top:20px ;
     }
+.haeader_descrption_image_container .image_container img {
+    max-width: 350px;
+}
 }
 .haeader_descrption_image_container .image_container img {
 width: 100%;
@@ -277,8 +289,10 @@ height: 100%;
 @media  (max-width: 992px){
     .header_description_word{
         margin: 10px;
-        height: 40vh;
+        height: 400px;
+        padding: 10px;
     }
+    
 }
 .nav_bar_section.sticky_nav{
     position: sticky;
@@ -367,7 +381,13 @@ overflow: hidden;
     min-width: 100%;
 }
 
-@media (max-width:992ox) {
+@media (max-width:992px) {
+    .best_chose_container {
+        display: block;
+    }
+    .best_chose_container .image_container{
+        min-width: 100px;
+    }
     .best_chose_container .image_container img{
         max-width: 80%;
         min-width: 80%;
@@ -375,8 +395,7 @@ overflow: hidden;
 }
 .best_chose_container  .best_chose_description{
     flex: 1;
-    /* max-width: 500px; */
-    min-width: 500px;
+    width: minmax(auto , 500px);
     overflow: hidden; 
 }
 
@@ -414,6 +433,12 @@ overflow: hidden;
     font-size: 18px;
     font-weight: bold;
     color:var(--primary-color);
+}
+@media (max-width:992px){
+    .collabas_container , .collabse{
+        margin: 10px auto;
+    }
+    
 }
 
 /* service section  */
@@ -596,18 +621,18 @@ transform: translate(-50% , -55%);
 .loader{
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     left: 0;
-    right: 0;
+    top: 0;
     background: var(--primary-color);
     z-index: 15;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 .lds-dual-ring {
     display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
   }
